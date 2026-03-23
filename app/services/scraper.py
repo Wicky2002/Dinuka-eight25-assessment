@@ -24,6 +24,7 @@ class WebScraper:
 				url,
 				headers=headers,
 				timeout=self.timeout_seconds,
+				verify=False,
 			)
 		except requests.exceptions.SSLError:
 			if not self.allow_insecure:

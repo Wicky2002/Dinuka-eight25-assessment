@@ -1,3 +1,5 @@
+**Live Demo:** TODO - Add deployed URL
+
 # AI Website Audit Tool
 
 A lightweight AI-powered website audit tool designed for structured, grounded analysis of marketing and UX signals.
@@ -7,6 +9,12 @@ A lightweight AI-powered website audit tool designed for structured, grounded an
 - **Extraction Layer**: [app/services/scraper.py](app/services/scraper.py) uses requests + BeautifulSoup to collect factual metrics (word count, headings, CTA count, link counts, images, meta tags) and visible page text.
 - **AI Layer**: [app/services/ai_analyzer.py](app/services/ai_analyzer.py) consumes only the extracted facts and text. It uses Gemini with a strict JSON schema to avoid hallucination and to return structured insights.
 - **UI Layer**: [app_ui.py](app_ui.py) provides a clean Streamlit interface that runs the scraper, displays metrics, and renders AI insights and recommendations.
+
+## Key Features
+
+- Predictive Impact Scoring with Plotly charts (current vs potential SEO/UX).
+- 4-Tab Enterprise Dashboard layout (Metrics, Insights, Growth, Logs).
+- Transparent Prompt Logging with full system/user prompts and raw model output.
 
 ## AI Design Decisions
 
